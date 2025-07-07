@@ -49,7 +49,7 @@ public class java_exercise_1 {
     }
      */
 
-    //question 7
+
 
 
 
