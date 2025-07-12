@@ -1,6 +1,8 @@
 package com.company;
 
 import java.util.HashMap;
+import java.util.List;
+import java.util.Random;
 import java.util.Scanner;
 
 public class logical_question {
@@ -8,33 +10,51 @@ public class logical_question {
         Scanner sc = new Scanner(System.in);
 
 
-        HashMap<String, String> replacements = new HashMap<>();
-        replacements.put("sad", "happy");
-        replacements.put("angry", "calm");
-        replacements.put("hate", "love");
-        replacements.put("tired", "energetic");
-
+        HashMap<String, List<String>> replacements = new HashMap<>();
+        replacements.put("sad", List.of("happy", "khush", "bahut khush"));
+        replacements.put("angry", List.of("calm", "gusse mein"));
+        replacements.put("hate", List.of("love", "prem"));
+        replacements.put("tired", List.of("energetic", "joshila"));
 
         System.out.println("Enter a sentence:");
         String input = sc.nextLine();
 
         String[] words = input.split(" ");
 
-        for(int i = 0;i< words.length;i++){
-                // Check if the word is in the replacements map
-                if (replacements.containsKey(words[i])) {
-                    // Replace the word with its replacement
-                    words[i] = replacements.get(words[i]);
-                }
+        Random r = new Random();
+        for (int i = 0; i < words.length; i++) {
+
+            if (replacements.containsKey(words[i])) {
+                List<String> replacementWords = replacements.get(words[i]);
+                int index = r.nextInt(replacementWords.size());
+                words[i] = replacementWords.get(index);
             }
-
-            // Join the words back into a sentence
-            String output = String.join(" ", words);
-
-            // Print the modified sentence
-            System.out.println("Modified sentence:");
-            System.out.println(output);
-
         }
+
+        // Join the words back into a sentence
+        String output = String.join(" ", words);
+
+        // Print the modified sentence
+        System.out.println("Modified sentence:");
+        System.out.println(output);
+//        Random r = new Random();
+//        System.out.println("Enter a sentence: ");
+//        String input = sc.nextLine();
+//
+//        //String[] inputWords ={"hello","yes","no","ok","nice"};
+//        String[] randomWords ={"good ","bad","honest","lier","dangerous"};
+//
+//        String[] words = input.split(" ");
+//
+//
+//        for (int i = 0; i < words.length; i++) {
+//            int randomIndex = r.nextInt(randomWords.length);
+//            words[i] = randomWords[randomIndex];
+//        }
+//
+//        // Step 5: Join the new words into a sentence
+//        String newSentence = String.join(" ", words);
+//        System.out.println("Randomized sentence: " + newSentence);
     }
+}
 
