@@ -1,15 +1,12 @@
 package com.company;
 
-import java.util.HashMap;
-import java.util.List;
-import java.util.Random;
-import java.util.Scanner;
+import java.util.*;
 
 public class logical_question {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
 
-
+/*
         HashMap<String, List<String>> replacements = new HashMap<>();
         replacements.put("sad", List.of("happy", "khush", "bahut khush"));
         replacements.put("angry", List.of("calm", "gusse mein"));
@@ -37,6 +34,7 @@ public class logical_question {
         // Print the modified sentence
         System.out.println("Modified sentence:");
         System.out.println(output);
+ */
 //        Random r = new Random();
 //        System.out.println("Enter a sentence: ");
 //        String input = sc.nextLine();
@@ -55,6 +53,36 @@ public class logical_question {
 //        // Step 5: Join the new words into a sentence
 //        String newSentence = String.join(" ", words);
 //        System.out.println("Randomized sentence: " + newSentence);
+
+        //question2
+
+        String input = "00101011010101";
+        int zeroCount = 0;
+
+        for(int i = 0;i<input.length();i++){
+            if(input.charAt(i)=='0' ){
+                zeroCount++;
+            }
+        }
+        for(int i= 0;i<zeroCount;i++ ){
+            System.out.print("0");
+        }
+        for(int i =0;i<input.length()-zeroCount;i++){
+            System.out.print("1");
+        }
+
+//        int a = 1;
+//        int b = 0;
+//
+//        for (int i = 1; i <= 7; i++) {
+//            for (int k = 0; k <= 10; k++) {
+//                System.out.print(b);
+//            }
+//            for(int j = 0; j <= 1; j++){
+//                b=a;
+//                System.out.print(a);
+//            }
+//        }
     }
 }
 
