@@ -34,13 +34,36 @@ public class arrays {
 //        }
 
         //question 4
-        int [] avg ={12,-34,98} ;
-        int sum = 0;
-        for(int i = 0;i<avg.length;i++){
-            sum = sum +avg[i];
+//        int [] avg ={12,-34,98} ;
+//        int sum = 0;
+//        for(int i = 0;i<avg.length;i++){
+//            sum = sum +avg[i];
+//        }
+//        double result = sum/ avg.length;
+//        System.out.println(result+" This is the average of three numbers");
+
+        //question 10
+        int [] numbers = {23,45,65,77,32};
+        System.out.println("original array is : ");
+        int num = 0;
+        for(int i = 0;i< numbers.length;i++){
+            System.out.print(numbers[i]+" ");
         }
-        double result = sum/ avg.length;
-        System.out.println(result+" This is the average of three numbers");
+        int max = numbers[0];
+        int min = numbers[0];
+
+        for (int i = 1; i < numbers.length; i++) {
+            if (numbers[i] > max) {
+                max = numbers[i]; // update max if current is bigger
+            }
+            if (numbers[i] < min) {
+                min = numbers[i]; // update min if current is smaller
+            }
+        }
+
+        System.out.println("\nMaximum number: " + max);
+        System.out.println("Minimum number: " + min);
+
         }
     }
 
