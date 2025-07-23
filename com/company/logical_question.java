@@ -55,7 +55,7 @@ public class logical_question {
 //        System.out.println("Randomized sentence: " + newSentence);
 
         //question2
-
+/*
         String input = "00101011010101";
         int zeroCount = 0;
 
@@ -70,19 +70,18 @@ public class logical_question {
         for(int i =0;i<input.length()-zeroCount;i++){
             System.out.print("1");
         }
+ */
 
-//        int a = 1;
-//        int b = 0;
-//
-//        for (int i = 1; i <= 7; i++) {
-//            for (int k = 0; k <= 10; k++) {
-//                System.out.print(b);
-//            }
-//            for(int j = 0; j <= 1; j++){
-//                b=a;
-//                System.out.print(a);
-//            }
-//        }
+        //question 4
+        int b = 5;
+        int n = 0;
+        for (int i = 0;i<=b;i++){
+            for (int k = 0;k<=n;k++){
+                System.out.print(k);
+            }
+            System.out.println();
+            n++;
+        }
     }
 }
 
