@@ -73,6 +73,7 @@ public class logical_question {
  */
 
         //question 4
+        /*
         int b = 5;
         int n = 0;
         for (int i = 0;i<=b;i++){
@@ -82,6 +83,24 @@ public class logical_question {
             System.out.println();
             n++;
         }
+         */
+
+        int[] number = {12, 23, 1, 23, 11};
+        System.out.println("Insert any number -->");
+        int s = sc.nextInt();
+        boolean fund = false;
+        for (int i = 0; i < number.length; i++) {
+            if (number[i] == s) {
+                fund = true;
+                break;
+            }
+        }
+            if (fund) {
+                System.out.println("yes");
+            } else {
+                System.out.println("no");
+            }
+        }
     }
-}
+
 
