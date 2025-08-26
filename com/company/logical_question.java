@@ -4,16 +4,11 @@ import java.util.*;
 
 public class logical_question {
     public static void main(String[] args) {
-        int a = 0;
-        int b = 1;
-        int d = 10;
-
-        System.out.print(a + " " + b + " ");
-        for(int i = 2;i<d;i++){
-            int sum = a+b;
-            System.out.print(sum+" ");
-            a = b;
-            b = sum;
-        }
+        //reversing a string
+        Scanner sc = new Scanner(System.in);
+        String s = sc.nextLine();
+        StringBuilder sb = new StringBuilder(s);
+        sb.reverse();
+        System.out.println("Reversed string is : "+sb);
     }
 }
